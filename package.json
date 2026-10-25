@@ -1,0 +1,15 @@
+{
+  "name": "open-source-the-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Open Source the World: an open-world hacking game that runs in the browser.",
+  "license": "AGPL-3.0-or-later",
+  "repository": "github:SolidGeeks/open-source-the-world",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/smoke.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

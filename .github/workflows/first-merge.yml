@@ -1,0 +1,15 @@
+# Celebrates a contributor's first merged pull request in this repository with Bit's card.
+# Pick it from "Actions → New workflow", or copy it to .github/workflows/first-merge.yml.
+# The logic lives in SolidGeeks/.github (.github/workflows/first-merge.yml): fix it there, once, for every repository.
+name: First merge
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  celebrate:
+    uses: SolidGeeks/.github/.github/workflows/first-merge.yml@main

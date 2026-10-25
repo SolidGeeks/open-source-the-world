@@ -1,0 +1,23 @@
+# Monthly. Minor and patch updates come grouped in one pull request per ecosystem: merge it when CI is green.
+# Each major update comes in its own pull request: read its release notes, and check that CI runs what it changes.
+# Actions are pinned to commit SHAs: Dependabot bumps the SHA and the version comment together.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        update-types: ["minor", "patch"]
+    commit-message:
+      prefix: ci
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      npm:
+        update-types: ["minor", "patch"]
+    commit-message:
+      prefix: deps
